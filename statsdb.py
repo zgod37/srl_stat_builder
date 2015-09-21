@@ -216,9 +216,9 @@ class SRLStats:
         race_stats = []
         race_stats.append(('Total Races:', len(race_ids)))
         race_stats.append(('Most Entrants:', most_entrants))
-        race_stats.append(('Average Entrants:', total_entrants/len(race_ids)))
-        race_stats.append(('Average Quit Rate:', sum(quit_rates)/len(race_ids)))
-        race_stats.append(('Highest Quit Rate:', max(quit_rates)))
+        race_stats.append(('Average Entrants:', round(total_entrants/len(race_ids), 2)))
+        race_stats.append(('Average Quit Rate:', round(sum(quit_rates)/len(race_ids),2)))
+        race_stats.append(('Highest Quit Rate:', round(max(quit_rates), 2)))
 
         print(race_stats)
         return race_stats

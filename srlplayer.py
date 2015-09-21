@@ -50,11 +50,11 @@ class Player:
         return self._rankings[rank]
 
     def get_win_rate(self):
-        return (self._rankings[1]/self._joins)*100
+        return round((self._rankings[1]/self._joins)*100, 2)
 
     def get_top3_rate(self):
         top3 = self._rankings[1] + self._rankings[2] + self._rankings[3]
-        return (top3/self._joins)*100
+        return round((top3/self._joins)*100, 2)
 
     def get_quit_rate(self):
-        return (self._quits/self._joins)*100
+        return round((self._quits/self._joins)*100, 2)
